@@ -1,114 +1,177 @@
-	/********** Base styles **********/
-	* {
-		box-sizing: border-box;
-		margin: 0;
-		padding: 0;
-		font-family: Arial, Helvetica, sans-serif;
-	}
-	h1 {
-		text-align: center;
-		font-size: 1.75em;
-		padding:20px;
-		margin-top: 20px;
-	}
-	div#container {
-		width: 100%;
-		height: 190px;
-		background-color: grey;
-		border: 1px solid black;
-		margin-right: auto;
-		margin-left: auto;
-		color: white;
-		overflow: hidden;
-		padding: 5px;
-		position: relative;
+/********** Base styles **********/
+* {
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	/*common font for the application*/
+	font-family: Arial, Helvetica, sans-serif;
+}
+/*styling for the desktop title*/
+h1 {
+	text-align: center;
+	font-size: 1.75em;
+	padding: 20px;
+}
+/*styling for the mobile title*/
+h2 {
+	text-align: left;
+	font-size: 1.5em;
+	padding: 20px;
+	/*set a different font family for the mobile title*/
+	font-family: "Arial Black", Gadget, sans-serif;
+}
 
+body {
+	margin: 20px;
+}
+/*container styling includes border and hides overflowing text*/
+div#container {
+	width: 100%;
+	height: 120px;
+	background-color: grey;
+	border: 1px solid black;
+	color: white;
+	overflow: hidden;
+	position: relative;
+}
+/*when user hovers over box the y-axis scrollbar will appear and the cursor will change to a "resize" cursor*/
+div#container:hover {
+	overflow-y: scroll;
+	cursor: s-resize;
+}
+p {
+	color: white;
+	margin: 0px;
+	padding: 5px;
+}
+/*formatting for the text box headers*/
+#p1-desktop {
+	width: 120px;
+	height: auto;
+	font-size: 1.25em;
+	background-color: #3D9970;
+	float: right;
+	text-align: center;
+	position: relative;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;			
+}
+#p1-mobile {
+	width: 100%;
+	height: auto;
+	font-size: 1.25em;
+	background-color: #3D9970;
+	float: left;
+	text-align: center;
+	position: relative;
+	border-bottom: 1px solid black;			
+}
+#p2-desktop {
+	width: 120px;
+	height: auto;
+	font-size: 1.25em;
+	background-color: #113C51;
+	float: right;
+	text-align: center;
+	position: relative;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;			
+}
+#p2-mobile {
+	width: 100%;
+	height: auto;
+	font-size: 1.25em;
+	background-color: #113C51;
+	float: left;
+	text-align: center;
+	position: relative;
+	border-bottom: 1px solid black;
+}
+#p3-desktop {
+	width: 120px;
+	height: auto;
+	font-size: 1.25em;
+	background-color: #FF7256;
+	float: right;
+	text-align: center;
+	position: relative;
+	border-left: 1px solid black;
+	border-bottom: 1px solid black;
+}
+#p3-mobile {
+	width: 100%;
+	height: auto;
+	font-size: 1.25em;
+	background-color: #FF7256;
+	float: left;
+	text-align: center;
+	position: relative;
+	border-bottom: 1px solid black;
+}
+/*formatting for the text boxes*/
+#p4-textbox {
+	width: 100%;
+	background-color: grey;
+	text-align: left;
+	float: left;
+}
 
-	}
-	p {
-		margin-right: auto;
-		margin-left: auto;
-		color: white;
-		padding: 5px;
-	}
-	#p1 {
-		width: 120px;
-		height: auto;
-		font-size: 1.25em;
-		border: 1px solid black;
-		background-color: #3D9970;
-		float: right;
-		text-align: center;
-		position: relative;
-		top: -6px;
-		left: 6px;
-	}
-	#p2 {
-		width: 120px;
-		height: auto;
-		font-size: 1.25em;
-		border: 1px solid black;
-		background-color: #113C51;
-		float: right;
-		text-align: center;
-		position: relative;
-		top: -6px;
-		left: 6px;
-	}
-	#p3 {
-		width: 120px;
-		height: auto;
-		font-size: 1.25em;
-		border: 1px solid black;
-		background-color: #FF7256;
-		float: right;
-		text-align: center;
-		position: relative;
-		top: -6px;
-		left: 6px;
-	}
-	#p4 {
-		width: 100%;
-		background-color: grey;
-		text-align: left;
+/* responsive framework template from class */
+
+.row {
+	width: 100%;
+
+}
+/********** Desktop devices only **********/
+@media (min-width: 992px) {
+	.col-lg-4 {
 		float: left;
+		padding: 20px;
 	}
-
-  /* Simple Responsive Framework. */
-  .row {
-  	width: 100%;
-  	padding: 20px;
-  }
-  /********** Desktop devices only **********/
-  @media (min-width: 992px) {
-  	.col-lg-4 {
-  		float: left;
-  		padding: 20px;
-  	}
-  	.col-lg-4 {
-  		width: 33.33%;
-  	}
-  }
-  /********** Medium devices only **********/
-  @media (min-width: 768px) and (max-width: 991px) {
-  	.col-md-6, .col-md-12 {
-  		float: left;
-  		padding: 20px;
-  	}
-  	.col-md-6 {
-  		width: 50%;
-  	}
-  	.col-md-12 {
-  		width: 100%;
-  	}
-  }
-  /********** Medium devices only **********/
-  @media (max-width: 767px) {
-  	.col-sm-12 {
-  		float: left;
-  		padding: 20px;
-  	}
-  	.col-sm-12 {
-  		width: 100%;
-  	}
-  }
+	.col-lg-4 {
+		width: 33.33%;
+	}
+	/*displays desktop content and not mobile content*/
+	#desktop-content{
+		display: block;
+	}
+	#mobile-content{
+		display:none;
+	}
+}
+/********** Medium devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+	.col-md-6, .col-md-12 {
+		float: left;
+		padding: 20px;
+	}
+	.col-md-6 {
+		width: 50%;
+	}
+	.col-md-12 {
+		width: 100%;
+	}
+	#desktop-content{
+		display: block;
+	}
+	#mobile-content{
+		display: none;
+	}
+}
+/********** Small (mobile) devices only **********/
+@media (max-width: 767px) {
+	.col-sm-12 {
+		float: left;
+		padding: 20px;
+	}
+	.col-sm-12 {
+		width: 100%;
+	}
+	/*displays mobile content and not desktop content*/
+	#desktop-content{
+		display: none;
+	}
+	#mobile-content{
+		display: block;
+	}
+}
