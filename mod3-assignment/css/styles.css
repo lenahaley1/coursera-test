@@ -30,7 +30,8 @@ a {
 .navbar-brand {
   padding-top: 12px;
 }
-.navbar-brand h1 { /* Restaurant name */
+.navbar-brand h1 { 
+  /* Restaurant name */
   color: black;
   font-size: 2em;
   text-transform: uppercase;
@@ -39,16 +40,19 @@ a {
   margin-bottom: 0;
   line-height: .75;
 }
-
+/*styling for the drop down menu*/
 #nav-list {
   margin-top: 10px;
+  background: #999999;
 }
 #nav-list a {
-  color: #cc6714;
+  color: #661a1a;
   text-align: center;
+  font-weight: bold;
 }
 #nav-list a:hover {
   background: #E7E7E7;
+
 }
 #nav-list a span {
   font-size: 1.8em;
