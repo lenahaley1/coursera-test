@@ -1,0 +1,118 @@
+/********** Base styles **********/
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  /*common font for the application*/
+  font-family: Arial, Helvetica, sans-serif;
+}
+body {
+  font-size: 16px;
+  background-color: #fff;
+}
+/*styling for Our Menu text*/
+h2{
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+a {
+  color:yellow;
+}
+
+/** HEADER **/
+#header-nav {
+  background-color: #425a91;
+  border-radius: 0;
+  border: 0;
+}
+
+.navbar-brand {
+  padding-top: 12px;
+}
+.navbar-brand h1 { /* Restaurant name */
+  color: black;
+  font-size: 2em;
+  text-transform: uppercase;
+  font-weight: bold;
+  margin-top: 0;
+  margin-bottom: 0;
+  line-height: .75;
+}
+
+#nav-list {
+  margin-top: 10px;
+}
+#nav-list a {
+  color: #cc6714;
+  text-align: center;
+}
+#nav-list a:hover {
+  background: #E7E7E7;
+}
+#nav-list a span {
+  font-size: 1.8em;
+}
+
+.navbar-header button.navbar-toggle, .navbar-header .icon-bar {
+  border: 2.5px solid #cc6714;
+}
+.navbar-header button.navbar-toggle {
+  clear: both;
+  margin-top: -30px;
+}
+/* END HEADER */
+
+
+/* HOME PAGE */
+
+/*styling for the menu panels*/
+section#textbox {
+  width: 100%;
+  height: 1000px;
+  background-color: #8994af;
+  border: 4px solid black;
+  color: white;
+  overflow: hidden;
+  margin-top:15px;
+  margin-bottom:15px;
+}
+
+/*styling for text in the panels*/
+section#textbox p{
+  margin:20px;
+  color: white;
+
+}
+
+/*styling for the titles in the panels*/
+h3{
+  font-size: 1.3em;
+}
+/* END HOME PAGE */
+
+
+/********** Large devices only **********/
+@media (min-width: 1200px) {
+
+}
+
+/********** Medium devices only **********/
+@media (min-width: 992px) and (max-width: 1199px) {
+
+}
+
+/********** Small devices only **********/
+@media (min-width: 768px) and (max-width: 991px) {
+  
+}
+
+/********** Extra small devices only **********/
+@media (max-width: 767px) {
+
+}
+
+
+
+
+
