@@ -251,6 +251,7 @@ function buildAndShowAboutHTML () {
       var starFive = starRatingClassArray[4];
 
       //insert properties for the about.html
+ 
       var aboutHtmlToInsert = insertProperty (aboutHtml, "starOne", starOne);
       var aboutHtmlToInsert = insertProperty (aboutHtmlToInsert, "starTwo", starTwo);
       var aboutHtmlToInsert = insertProperty (aboutHtmlToInsert, "starThree", starThree);
