@@ -1,0 +1,11 @@
+<div class="container-fluid">
+<ul>
+  <li ng-repeat="item in items">
+    <div><h4>Short Name: <small>{{ item.short_name }}</small></h4>
+       <h4>Name: <small>{{ item.name }}</small></h4>
+       <h4>Description: <small>{{item.description}}</small></h4>
+     </div>
+    <button ng-click="onRemove({index: $index});" class="btn btn-secondary">Remove Item</button>
+  </li>
+</ul>
+</div>
