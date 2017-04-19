@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en" ng-app="MenuApp">
+
+	<head>
+		<meta charset="utf-8">
+		<title>Lena Snyder Module 9 Application</title>
+		<link rel="stylesheet" href="styles/bootstrap.min.css">
+		<link rel="stylesheet" href="styles/styles.css">
+	</head>
+
+	<body>
+		
+		<ui-view></ui-view>
+
+		<!-- Libraries -->
+		<script src="lib/angular.min.js"></script>
+		<script src="lib/angular-ui-router.min.js"></script>
+
+		<!-- Modules -->
+		<script src="js/menuapp.module.js"></script>
+		<script src="js/data.module.js"></script>
+
+		<!-- Routes -->
+		<script src="js/routes.js"></script>
+
+		<!-- MenuApp module artifacts -->
+		<script src="js/categories.component.js"></script>
+		<script src="js/categories.controller.js"></script>
+		<script src="js/items.component.js"></script>
+		<script src="js/items.controller.js"></script>
+
+		<!-- Services-->
+		<script src="js/menudata.service.js"></script>
+
+	</body>
+
+</html>
