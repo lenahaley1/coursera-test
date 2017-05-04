@@ -1,0 +1,94 @@
+<div class="container">
+  <h2 class="text-center">Newsletter sign up</h2>
+
+  <div ng-if="signUpCtrl.submitted">You have successfully signed up for the newsletter! Check your information in the "My Info" section.</div>
+
+  <div ng-if="!signUpCtrl.submitted">
+
+  <form name="signUpForm" novalidate ng-submit="signUpForm.$valid && signUpForm.submit()">
+
+  <div>
+    <label for="firstName">First name</label>
+    <input
+      class="form-control input-sm"
+      type="text"
+      name="firstName"
+      placeholder="First name"
+      required
+      ng-model="signUpCtrl.info.firstName">
+    <span ng-if="signUpForm.firstName.$invalid && signUpForm.firstName.$touched">
+      Please enter your first name
+    </span>
+  </div>
+
+  <div>
+    <label for="lastName">Last name</label>
+    <input
+      class="form-control input-sm"
+      type="text"
+      name="lastName"
+      placeholder="Last name"
+      required
+      ng-model="signUpCtrl.info.lastName">
+    <span ng-if="signUpForm.lastName.$invalid && signUpForm.lastName.$touched">
+      Please enter your last name
+    </span>
+  </div>
+
+  <div>
+    <label for="email">Email address</label>
+    <input
+      class="form-control input-sm"
+      type="email"
+      name="email"
+      placeholder="Email address"
+      required
+      ng-model="signUpCtrl.info.email">
+    <span ng-if="signUpForm.email.$invalid && signUpForm.email.$touched">
+       Please enter a valid email address in handle@domain format
+    </span>
+  </div>
+
+  <div>
+    <label for="phone">Phone number</label>
+    <input
+      class="form-control input-sm"
+      type="text"
+      name="phone"
+      placeholder="Phone number ###-###-####"
+      pattern="(\d{3})-(\d{3})-(\d{4})"
+      required
+      ng-model="signUpCtrl.info.phone">
+    <span ng-if="signUpForm.phone.$invalid && signUpForm.phone.$touched">
+      Please enter valid phone number in ###-###-#### format
+    </span>
+  </div>
+
+  <div>
+    <label for="favorite">Menu number of favorite dish</label>
+    <input
+      class="form-control input-sm"
+      type="text"
+      required
+      name="favorite"
+      placeholder="Favorite dish"
+      ng-model="signUpCtrl.info.menuSelection"
+      ng-blur="signUpCtrl.checkMenuSelection()">
+    <span ng-if="signUpCtrl.clearMenuSelection">
+      Please choose a valid menu number
+    </span>
+  </div>
+  <br>
+
+  <button
+    type="submit"
+    class="btn btn-info btn-sm"
+    ng-disabled="signUpForm.$invalid || signUpForm.$pending"
+    ng-click="signUpCtrl.submit()">Submit
+  </button>
+
+</form>
+</div>
+
+
+</div>
